@@ -2,7 +2,7 @@ const builderTemplate = document.createElement("template");
 builderTemplate.innerHTML = `
 		<form id="form">
 			<fieldset>
-				<legend>Colored Box Properties</legend>
+				<legend>Candlesticks chart Properties</legend>
 				<table>
 					<tr>
 						<td>Opacity</td>

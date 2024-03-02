@@ -1,4 +1,4 @@
-const stylingTemplate = document.createElement("template");
+const stylingTemplate = document.createElement('template');
 stylingTemplate.innerHTML = `
 		<form id="form">
 			<fieldset>
@@ -23,47 +23,51 @@ stylingTemplate.innerHTML = `
 	`;
 
 export class CandlestickStylingPanel extends HTMLElement {
-    constructor() {
-        super();
-        this._shadowRoot = this.attachShadow({mode: "open"});
-        this._shadowRoot.appendChild(stylingTemplate.content.cloneNode(true));
-        this._shadowRoot.getElementById("form").addEventListener("submit", this._submit.bind(this));
-    }
+  constructor() {
+    super();
+    this._shadowRoot = this.attachShadow({ mode: 'open' });
+    this._shadowRoot.appendChild(stylingTemplate.content.cloneNode(true));
+    this._shadowRoot
+      .getElementById('form')
+      .addEventListener('submit', this._submit.bind(this));
+  }
 
-    _submit(e) {
-        e.preventDefault();
-        this.dispatchEvent(new CustomEvent("propertiesChanged", {
-            detail: {
-                properties: {
-                    borderWidth: this.borderWidth,
-                    borderStyle: this.borderStyle,
-                    borderColor: this.borderColor
-                }
-            }
-        }));
-    }
+  _submit(e) {
+    e.preventDefault();
+    this.dispatchEvent(
+      new CustomEvent('propertiesChanged', {
+        detail: {
+          properties: {
+            borderWidth: this.borderWidth,
+            borderStyle: this.borderStyle,
+            borderColor: this.borderColor,
+          },
+        },
+      }),
+    );
+  }
 
-    set borderWidth(newColor) {
-        this._shadowRoot.getElementById("border_width").value = newColor;
-    }
+  set borderWidth(newColor) {
+    this._shadowRoot.getElementById('border_width').value = newColor;
+  }
 
-    get borderWidth() {
-        return this._shadowRoot.getElementById("border_width").value;
-    }
+  get borderWidth() {
+    return this._shadowRoot.getElementById('border_width').value;
+  }
 
-    set borderStyle(newColor) {
-        this._shadowRoot.getElementById("border_style").value = newColor;
-    }
+  set borderStyle(newColor) {
+    this._shadowRoot.getElementById('border_style').value = newColor;
+  }
 
-    get borderStyle() {
-        return this._shadowRoot.getElementById("border_style").value;
-    }
+  get borderStyle() {
+    return this._shadowRoot.getElementById('border_style').value;
+  }
 
-    set borderColor(newColor) {
-        this._shadowRoot.getElementById("border_color").value = newColor;
-    }
+  set borderColor(newColor) {
+    this._shadowRoot.getElementById('border_color').value = newColor;
+  }
 
-    get borderColor() {
-        return this._shadowRoot.getElementById("border_color").value;
-    }
+  get borderColor() {
+    return this._shadowRoot.getElementById('border_color').value;
+  }
 }

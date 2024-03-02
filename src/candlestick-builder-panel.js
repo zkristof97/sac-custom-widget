@@ -1,4 +1,4 @@
-const builderTemplate = document.createElement("template");
+const builderTemplate = document.createElement('template');
 builderTemplate.innerHTML = `
 		<form id="form">
 			<fieldset>
@@ -21,29 +21,33 @@ builderTemplate.innerHTML = `
 	`;
 
 export class CandlestickBuilderPanel extends HTMLElement {
-    constructor() {
-        super();
-        this._shadowRoot = this.attachShadow({mode: "open"});
-        this._shadowRoot.appendChild(builderTemplate.content.cloneNode(true));
-        this._shadowRoot.getElementById("form").addEventListener("submit", this._submit.bind(this));
-    }
+  constructor() {
+    super();
+    this._shadowRoot = this.attachShadow({ mode: 'open' });
+    this._shadowRoot.appendChild(builderTemplate.content.cloneNode(true));
+    this._shadowRoot
+      .getElementById('form')
+      .addEventListener('submit', this._submit.bind(this));
+  }
 
-    _submit(e) {
-        e.preventDefault();
-        this.dispatchEvent(new CustomEvent("propertiesChanged", {
-            detail: {
-                properties: {
-                    opacity: this.opacity
-                }
-            }
-        }));
-    }
+  _submit(e) {
+    e.preventDefault();
+    this.dispatchEvent(
+      new CustomEvent('propertiesChanged', {
+        detail: {
+          properties: {
+            opacity: this.opacity,
+          },
+        },
+      }),
+    );
+  }
 
-    set opacity(newOpacity) {
-        this._shadowRoot.getElementById("builder_opacity").value = newOpacity;
-    }
+  set opacity(newOpacity) {
+    this._shadowRoot.getElementById('builder_opacity').value = newOpacity;
+  }
 
-    get opacity() {
-        return this._shadowRoot.getElementById("builder_opacity").value;
-    }
+  get opacity() {
+    return this._shadowRoot.getElementById('builder_opacity').value;
+  }
 }

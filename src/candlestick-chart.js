@@ -159,15 +159,16 @@ export class CandlestickChart extends HTMLElement {
     }
 
     onCustomWidgetAfterUpdate(changedProperties) {
-        console.log('onCustomWidgetAfterUpdate');
-        console.log('changedProperties:', changedProperties);
-        // if ('clickCounter' in changedProperties) {
-        //     const clickNrEl = this._shadowRoot.querySelector("#clickNr");
-        //     clickNrEl.innerHTML = changedProperties['clickCounter'];
-        // }
+        if ("borderWidth" in changedProperties ) {
+            this.style["border-width"] = changedProperties["borderWidth"];
+        }
 
-        if ("color" in changedProperties) {
-            this.style["background-color"] = changedProperties["color"];
+        if ("borderStyle" in changedProperties ) {
+            this.style["border-style"] = changedProperties["borderStyle"];
+        }
+
+        if ("borderColor" in changedProperties ) {
+            this.style["border-color"] = changedProperties["borderColor"];
         }
 
         if ("opacity" in changedProperties) {

@@ -1,6 +1,6 @@
 {
   "id": "com.candleSticks",
-  "version": "1.0.18",
+  "version": "1.0.21",
   "name": "Candlesticks",
   "description": "Displays data in the form of candleSticks",
   "newInstancePrefix": "candleSticks",
@@ -32,10 +32,20 @@
     }
   ],
   "properties": {
-    "color": {
+    "borderColor": {
       "type": "string",
-      "description": "Background color",
-      "default": "lightblue"
+      "description": "Border color",
+      "default": ""
+    },
+    "borderStyle": {
+      "type": "string",
+      "description": "Border style",
+      "default": ""
+    },
+    "borderWidth": {
+      "type": "string",
+      "description": "Border width",
+      "default": ""
     },
     "opacity": {
       "type": "number",
@@ -61,22 +71,6 @@
           "description": "The index of the range to select"
         }
       ]
-    },
-    "setColor": {
-      "description": "Sets the background color.",
-      "parameters": [
-        {
-          "name": "newColor",
-          "type": "string",
-          "description": "The new background color"
-        }
-      ],
-      "body": "this.color = newColor;"
-    },
-    "getColor": {
-      "returnType": "string",
-      "description": "Returns the background color.",
-      "body": "return this.color;"
     }
   },
   "events": {

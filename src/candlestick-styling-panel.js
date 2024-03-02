@@ -5,8 +5,16 @@ stylingTemplate.innerHTML = `
 				<legend>Candlesticks chart Properties</legend>
 				<table>
 					<tr>
-						<td>Color</td>
-						<td><input id="styling_color" type="text" size="40" maxlength="40"></td>
+						<td>Border-width</td>
+						<td><input id="border_width" type="text" size="40" maxlength="40"></td>
+					</tr>					
+					<tr>
+						<td>Border-style</td>
+						<td><input id="border_style" type="text" size="40" maxlength="40"></td>
+					</tr>					
+					<tr>
+						<td>Border-color</td>
+						<td><input id="border_color" type="text" size="40" maxlength="40"></td>
 					</tr>
 				</table>
 				<input type="submit">
@@ -27,17 +35,35 @@ export class CandlestickStylingPanel extends HTMLElement {
         this.dispatchEvent(new CustomEvent("propertiesChanged", {
             detail: {
                 properties: {
-                    color: this.color
+                    borderWidth: this.borderWidth,
+                    borderStyle: this.borderStyle,
+                    borderColor: this.borderColor
                 }
             }
         }));
     }
 
-    set color(newColor) {
-        this._shadowRoot.getElementById("styling_color").value = newColor;
+    set borderWidth(newColor) {
+        this._shadowRoot.getElementById("border_width").value = newColor;
     }
 
-    get color() {
-        return this._shadowRoot.getElementById("styling_color").value;
+    get borderWidth() {
+        return this._shadowRoot.getElementById("border_width").value;
+    }
+
+    set borderStyle(newColor) {
+        this._shadowRoot.getElementById("border_style").value = newColor;
+    }
+
+    get borderStyle() {
+        return this._shadowRoot.getElementById("border_style").value;
+    }
+
+    set borderColor(newColor) {
+        this._shadowRoot.getElementById("border_color").value = newColor;
+    }
+
+    get borderColor() {
+        return this._shadowRoot.getElementById("border_color").value;
     }
 }

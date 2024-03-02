@@ -12,7 +12,7 @@ export class CandlestickChart extends HTMLElement {
 
     this._shadowRoot.appendChild(template.content.cloneNode(true));
     this.addEventListener('click', () => {
-      var event = new Event('onClick');
+      const event = new Event('onClick');
       this.dispatchEvent(event);
     });
 

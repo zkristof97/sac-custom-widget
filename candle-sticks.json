@@ -1,6 +1,6 @@
 {
   "id": "com.candleSticks",
-  "version": "1.0.24",
+  "version": "1.0.26",
   "name": "Candlesticks",
   "description": "Displays data in the form of candleSticks",
   "newInstancePrefix": "candleSticks",
@@ -75,23 +75,7 @@
   },
   "events": {
     "onClick": {
-      "description": "Called when the user clicks the Colored Box."
-    }
-  },
-  "dataBindings": {
-    "myDataSource": {
-      "feeds": [
-        {
-          "id": "dimensions",
-          "description": "The dimensions feed",
-          "type": "dimension"
-        },
-        {
-          "id": "measures",
-          "description": "The measures feed",
-          "type": "mainStructureMember"
-        }
-      ]
+      "description": "Called when the user clicks the chart"
     }
   }
 }

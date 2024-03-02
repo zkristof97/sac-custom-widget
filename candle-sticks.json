@@ -1,0 +1,104 @@
+{
+  "id": "com.candleSticks",
+  "version": "1.0.18",
+  "name": "Candlesticks",
+  "description": "Displays data in the form of candleSticks",
+  "newInstancePrefix": "candleSticks",
+  "icon": " https://8d0e-2001-4c4c-209b-1800-759b-5e6-199d-d45a.ngrok-free.app/customwidgets/icon.png",
+  "vendor": "Student",
+  "eula": "",
+  "license": "",
+  "webcomponents": [
+    {
+      "kind": "main",
+      "tag": "com-candlestick-chart",
+      "url": " https://8d0e-2001-4c4c-209b-1800-759b-5e6-199d-d45a.ngrok-free.app/customwidgets/main.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    },
+    {
+      "kind": "styling",
+      "tag": "com-candlestick-styling",
+      "url": " https://8d0e-2001-4c4c-209b-1800-759b-5e6-199d-d45a.ngrok-free.app/customwidgets/main.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    },
+    {
+      "kind": "builder",
+      "tag": "com-candlestick-builder",
+      "url": " https://8d0e-2001-4c4c-209b-1800-759b-5e6-199d-d45a.ngrok-free.app/customwidgets/main.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    }
+  ],
+  "properties": {
+    "color": {
+      "type": "string",
+      "description": "Background color",
+      "default": "lightblue"
+    },
+    "opacity": {
+      "type": "number",
+      "description": "Opacity",
+      "default": 1
+    },
+    "width": {
+      "type": "integer",
+      "default": 100
+    },
+    "height": {
+      "type": "integer",
+      "default": 100
+    }
+  },
+  "methods": {
+    "setRange": {
+      "description": "Select a range in the rangeSelector",
+      "parameters": [
+        {
+          "name": "selectionIdx",
+          "type": "integer",
+          "description": "The index of the range to select"
+        }
+      ]
+    },
+    "setColor": {
+      "description": "Sets the background color.",
+      "parameters": [
+        {
+          "name": "newColor",
+          "type": "string",
+          "description": "The new background color"
+        }
+      ],
+      "body": "this.color = newColor;"
+    },
+    "getColor": {
+      "returnType": "string",
+      "description": "Returns the background color.",
+      "body": "return this.color;"
+    }
+  },
+  "events": {
+    "onClick": {
+      "description": "Called when the user clicks the Colored Box."
+    }
+  },
+  "dataBindings": {
+    "myDataSource": {
+      "feeds": [
+        {
+          "id": "dimensions",
+          "description": "The dimensions feed",
+          "type": "dimension"
+        },
+        {
+          "id": "measures",
+          "description": "The measures feed",
+          "type": "mainStructureMember"
+        }
+      ]
+    }
+  }
+}
+

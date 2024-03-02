@@ -5,6 +5,7 @@ app.listen(3000, function () {
 });
 
 app.use('/customwidgets', express.static(__dirname + '/dist'));
+app.use('/asset', express.static(__dirname + '/asset'));
 
 app.get('/', function (req, res) {
   res.send('Hello World');

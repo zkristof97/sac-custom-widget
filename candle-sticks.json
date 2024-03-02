@@ -1,10 +1,10 @@
 {
   "id": "com.candleSticks",
-  "version": "1.0.21",
+  "version": "1.0.24",
   "name": "Candlesticks",
   "description": "Displays data in the form of candleSticks",
   "newInstancePrefix": "candleSticks",
-  "icon": "https://github.com/zkristof97/sac-custom-widget/tree/main/asset/icon.png",
+  "icon": "https://8d0e-2001-4c4c-209b-1800-759b-5e6-199d-d45a.ngrok-free.app/asset/icon.png",
   "vendor": "Student",
   "eula": "",
   "license": "",
@@ -12,21 +12,21 @@
     {
       "kind": "main",
       "tag": "com-candlestick-chart",
-      "url": "https://github.com/zkristof97/sac-custom-widget/tree/main/dist/main.js",
+      "url": "https://8d0e-2001-4c4c-209b-1800-759b-5e6-199d-d45a.ngrok-free.app/customwidgets/main.js",
       "integrity": "",
       "ignoreIntegrity": true
     },
     {
       "kind": "styling",
       "tag": "com-candlestick-styling",
-      "url": "https://github.com/zkristof97/sac-custom-widget/tree/main/dist/main.js",
+      "url": "https://8d0e-2001-4c4c-209b-1800-759b-5e6-199d-d45a.ngrok-free.app/customwidgets/main.js",
       "integrity": "",
       "ignoreIntegrity": true
     },
     {
       "kind": "builder",
       "tag": "com-candlestick-builder",
-      "url": "https://github.com/zkristof97/sac-custom-widget/tree/main/dist/main.js",
+      "url": "https://8d0e-2001-4c4c-209b-1800-759b-5e6-199d-d45a.ngrok-free.app/customwidgets/main.js",
       "integrity": "",
       "ignoreIntegrity": true
     }

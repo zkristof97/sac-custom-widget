@@ -1,10 +1,10 @@
 {
   "id": "com.candleSticks",
-  "version": "1.0.26",
+  "version": "1.0.28",
   "name": "Candlesticks",
   "description": "Displays data in the form of candleSticks",
   "newInstancePrefix": "candleSticks",
-  "icon": "https://8d0e-2001-4c4c-209b-1800-759b-5e6-199d-d45a.ngrok-free.app/asset/icon.png",
+  "icon": "/asset/icon.png",
   "vendor": "Student",
   "eula": "",
   "license": "",
@@ -12,21 +12,21 @@
     {
       "kind": "main",
       "tag": "com-candlestick-chart",
-      "url": "https://8d0e-2001-4c4c-209b-1800-759b-5e6-199d-d45a.ngrok-free.app/customwidgets/main.js",
+      "url": "/main.js",
       "integrity": "",
       "ignoreIntegrity": true
     },
     {
       "kind": "styling",
       "tag": "com-candlestick-styling",
-      "url": "https://8d0e-2001-4c4c-209b-1800-759b-5e6-199d-d45a.ngrok-free.app/customwidgets/main.js",
+      "url": "/main.js",
       "integrity": "",
       "ignoreIntegrity": true
     },
     {
       "kind": "builder",
       "tag": "com-candlestick-builder",
-      "url": "https://8d0e-2001-4c4c-209b-1800-759b-5e6-199d-d45a.ngrok-free.app/customwidgets/main.js",
+      "url": "/main.js",
       "integrity": "",
       "ignoreIntegrity": true
     }
